@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+        {% block content %}
+
+        <!-- CAROUSEL-->
+    <div class="turiJinotega">
+
+    <div id="mainSlider" class=" carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item ">
+            <img src="{{departamento_detail.slide.url}}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item active">
+            <img src="{{departamento_detail.slide1.url}}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{departamento_detail.slide2.url}}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+          <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'departamemtos_detail' departamento_detail.departamento %}">Turismo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="">Hoteles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Restaurantes</a>
+  </li>
+</ul>
+    </div><!-- CAROUSEL-->
+
+        <div class="container-md p-5">
+
+        <div class="row pt-0">
+         </div>
+        <div class="row">
+        {% for hoteld in hoteleria %}
+            <div class="col-sm" id="">
+                <div class="card w-100 card-border mb-5">
+                    <img src="{{hoteld.imageperfil.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">{{hoteld.namehotel}}</p>
+                        <div class="row loging">
+                       <div class="col">
+                        <button class="btn btn-outline-primary w-100 my-1" id="loging">
+                        <div class="row align-items-center">
+                        <div class="col-2">
+                <!--    <img src="img/go.png" width="32"> -->
+                        </div>
+                        <a href="{% url 'hotel_detail' hoteld.namehotel %}" class="col-10 ">
+
+
+
+                        Ver más
+
+                        </a>
+                        </div>
+                        </button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                {% endfor %}
+         </div>
+
+
+        {% endblock %}

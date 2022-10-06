@@ -1,0 +1,34 @@
+	{% extends 'base.html' %}
+	{% block content %}
+	<div class="bodydiv">
+    <form action="/signup/" method="POST" id="form">
+	 {%csrf_token%}
+        <div class="formp fomt">
+            <h1 class="h1f">Registro</h1>
+            <div class="grupo">
+                <input type="text" name="nombre" id="name" required class="inputf"><span class="barra"></span>
+                <label for="" class="labelf">Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="contraseña1" id="password" required class="inputf"><span class="barra"></span>
+                <label for="" class="labelf">Contraseña</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="contraseña2" id="password" required class="inputf"><span class="barra"></span>
+                <label for="" class="labelf">Confirmar contraseña</label>
+            </div>
+		<p class="perror">{{error}}</p>
+            <button type="submit" class="buttonf">Regístrate</button>
+        </div>
+
+    </form>
+	</div> 
+
+<style>
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
+</style>
+{% endblock %}

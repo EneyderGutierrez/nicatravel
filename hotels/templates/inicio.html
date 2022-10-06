@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+        {% block content %}
+<div class="inicio hidden" id="inicio">
+<div id="games">
+      <div class="container-md p-5">
+        <div class="row pt-0">
+            <h3 class="text-center pb-5 pt-1 h1">Nicaragua</h3>
+        </div>
+	<div class="row">
+	{% for departamentodn in departamentos %}
+            <div class="col-sm" id="">
+                <div class="card w-100 card-border mb-5">
+                    <img src="{{departamentodn.imageperfil.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">{{departamentodn.description}}</p>
+			<div class="row loging">
+		       <div class="col">
+        		<button class="btn btn-outline-primary w-100 my-1" id="loging">
+           		<div class="row align-items-center">
+             		<div class="col-2">
+               	<!--	<img src="img/go.png" width="32"> -->
+             		</div>
+			<a href="{% url 'departamemtos_detail' departamentodn.departamento %}" class="col-10 ">
+
+
+
+               		Ver más
+			
+			</a>
+           		</div>
+         		</button>
+       			</div>
+     			</div>
+                    	</div>
+                  	</div>
+                      	</div>
+		{% endfor %}
+         </div></div>      
+        
+
+<ol class=" list-group list-group-numbered d-none">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Reserva Natural Macizo de Peñas Blancas</div>
+      Este macizo es uno de los más imponentes atractivos naturales de Jinotega.
+    </div>
+
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Eco albergue “Entre Brisas y Encanto” La Fundadora</div>
+      Su mayor atractivo es sus vistas de 360º de montañas, sus áreas verdes y su clima más que fresco, característica de la zona.
+    </div>
+
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Canopy Tour La Brellera</div>
+      El canopy es una actividad de mucha adrenalina. Cuenta con nueve plataformas de ocho cables y dos puentes colgantes
+    </div>
+
+  </li>
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Parque natural Las Madres</div>
+      Contiene senderos que te guiarán por un bonito recorrido entre diferentes tipos de plantas. Es ideal para visitarlo en familia y si gustas también puedes hacerlo de noche y es igual de bonito.
+    </div>
+
+  </li>
+
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Museo Municipal de Jinotega</div>
+      Un bello edificio de arquitectura estilo colonial con mucha historia y actualmente con dos salas de exposición habilitadas donde podrás apreciar una colección de cerámica y lítica precolombina encontradas en territorio jinotegano.
+    </div>
+
+  </li>
+
+
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Centro acuático El Chilamate</div>
+      También a orillas del lago Apanás. Ofrece variedad de platillos y bebidas, además de actividades acuáticas como kayak, diferentes tours en lancha, pesca y baño en las aguas del lago.
+    </div>
+
+  </li>
+
+
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Cascada La Bujona</div>
+      Ubicada en la comunidad La Esmeralda y formando parte de la Reserva Natural Datanlí – El Diablo, encontrarás esta majestuosa cascada de unos 25 metros de altura, llamada así por el sonido que producen sus aguas
+    </div>
+
+  </li>
+
+
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Peña de la Cruz</div>
+      Lugar emblemático de la ciudad de Jinotega. Es ideal para los amantes del ejercicio, ya que con sus más de novecientos escalones pondrán a prueba tu resistencia.  Cada cierto número de gradas podrás descansar mientras disfrutas los diferentes niveles de vistas panorámicas que te ofrece a medida que subes.
+    </div>
+
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Casa Museo Benjamín Zeledón</div>
+      Ubicado en la casa y cuna de nuestro héroe nacional, en el municipio de La Concordia. Fue reconstruida y habilitada para rendirle homenaje.
+    </div>
+
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Museo EDSN Blanca Arauz</div>
+      Conozca la casa que fue hogar de Blanca Arauz, esposa del Gral. Augusto C. Sandino y heroína nacional.
+    </div>
+
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Rancho Bonito</div>
+      Una opción prácticamente nueva a las orillas del lago Apanás. Cuenta con servicio de alimentos y bebidas.  Puedes practicar kayak, montar a caballo y nadar en su piscina.
+    </div>
+
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Cabaña Tío Nacho</div>
+      Un pequeño, pero pintoresco hotel de montaña ubicado en la comunidad La Brellera, en San Rafael del Norte, donde encontrarás la tranquilidad que tanto anhelamos los citadinos
+    </div>
+
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Parque Apapuerta de Xinotecalt</div>
+      Creado para la diversión infantil y familiar, cuenta con áreas deportivas, bonitos jardines, áreas de descanso y piscinas para adulto y niños de diferentes edades.
+    </div>
+
+  </li>
+
+
+</ol>
+
+
+</div>
+{% endblock %}
+
+

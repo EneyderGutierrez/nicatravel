@@ -1,0 +1,28 @@
+	{% extends 'base.html' %}
+        {% block content %}
+	<div class="bodydiv">
+    <form action="/signin/" method="POST" id="form" class="formp">
+         {%csrf_token%}
+        <div class="formt">
+            <h1 class="h1f">Inicia Sesion</h1>
+            <div class="grupo">
+                <input type="text" name="nombre" id="name" class="inputf" required><span class="barra"></span>
+                <label  class="labelf" for="">Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="contraseña" class="inputf"  id="password" required><span class="barra"></span>
+                <label class="labelf"for="">Contraseña</label>
+            </div><p class="perror">{{error}}</p>
+            <button type="submit" class="buttonf">Iniciar Sesion</button>
+        </div>
+    </form>
+        
+</div>
+<style>
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
+</style>
+{% endblock %}

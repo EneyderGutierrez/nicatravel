@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+        {% block content %}
+	
+	<!-- CAROUSEL-->
+    <div class="turiJinotega">
+
+    <div id="mainSlider" class=" carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item ">
+            <img src="{{departamento_detail.slide.url}}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item active">
+            <img src="{{departamento_detail.slide1.url}}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{departamento_detail.slide2.url}}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+          <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'departamemtos_detail' departamento_detail.departamento %}">Turismo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'departamemtos_detail_hotel' departamento_detail.departamento %}">Hoteles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'departamemtos_detail_rest' departamento_detail.departamento %}">Restaurantes</a>
+  </li>
+</ul>
+    </div><!-- CAROUSEL-->
+
+	{% for turis in sites %}
+	
+<ol class=" list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{turis.description}}</div>
+    </div>
+
+  </li>
+</ol>
+	{% endfor %}
+
+	{% endblock %}
