@@ -55,4 +55,4 @@ class createrestau(forms.ModelForm):
 class createdep(forms.ModelForm):
         class Meta:
                 model = departamentosur
-                fields = ['departamento','description','imageperfil','slide','slide', 'slide2']
+                fields = ['departamento','description','imageperfil','slide','slide1', 'slide2']
