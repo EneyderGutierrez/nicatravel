@@ -21,5 +21,6 @@ urlpatterns = [
 	path('reservation/', views.reservation, name='reservation'),
 	path('createrest/', views.createrest, name='resta'),
 	path('departamentos_detail_rest/<str:departamentosdn_name>/', views.departamentos_detail_rest, name='departamemtos_detail_rest'),
+        path('adminnk/', views.createdepi, name='admon'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
