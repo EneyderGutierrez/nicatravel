@@ -1,5 +1,7 @@
 from django import forms
 from .models import perfil, hoteleslni ,reservationhotelx as reservationhotel, restni,departamentosur
+class perfilform(forms.ModelForm):
+        class Meta:
 		model = perfil
 		fields = ['nombre', 'apellidos','telefono','movil','email','ciudad']
 		widgets = {
