@@ -1,7 +1,5 @@
 from django import forms
-from .models import perfil, hoteleslni ,reservationhotelx as reservationhotel, restni
-class perfilform(forms.ModelForm):
-	class Meta:
+from .models import perfil, hoteleslni ,reservationhotelx as reservationhotel, restni,departamentosur
 		model = perfil
 		fields = ['nombre', 'apellidos','telefono','movil','email','ciudad']
 		widgets = {
@@ -53,3 +51,8 @@ class createrestau(forms.ModelForm):
 			'direccion': forms.TextInput(attrs={'class':'form-control'}),
 			'precio': forms.TextInput(attrs={'class':'form-control'}),
                 }
+
+class createdep(forms.ModelForm):
+        class Meta:
+                model = departamentosur
+                fields = ['departamento','description','imageperfil','slide','slide', 'slide2']
