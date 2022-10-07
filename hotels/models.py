@@ -132,10 +132,10 @@ class restni(models.Model):
 class departamentosur(models.Model):
         departamento = models.CharField(max_length=30)
         description = models.TextField()
-        imageperfil = models.models.CharField(max_length=3000)
-        slide = models.models.CharField(max_length=3000)
-        slide1 = models.models.CharField(max_length=3000)
-        slide2 = models.models.CharField(max_length=3000)
+        imageperfil = models.CharField(max_length=3000)
+        slide = models.CharField(max_length=3000)
+        slide1 = models.CharField(max_length=3000)
+        slide2 = models.CharField(max_length=3000)
         def __str__(self):
                 return self.departamento
 
