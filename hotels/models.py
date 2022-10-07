@@ -128,3 +128,14 @@ class restni(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	def __str__(self):
 		return self.nombre_restaurante
+
+class departamentosur(models.Model):
+        departamento = models.CharField(max_length=30)
+        description = models.TextField()
+        imageperfil = models.models.CharField(max_length=3000)
+        slide = models.models.CharField(max_length=3000)
+        slide1 = models.models.CharField(max_length=3000)
+        slide2 = models.models.CharField(max_length=3000)
+        def __str__(self):
+                return self.departamento
+
