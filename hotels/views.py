@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.conf.urls.static import static
 from django.contrib.auth import login, logout, authenticate
 from .models import perfil, iniciomodelnk, departamentos, turi, hoteleslni, reservationhotelx as reservationhotel, restni
-from .forms import perfilform, createhotel, reservahform, createrestau
+from .forms import perfilform, createhotel, reservahform, createrestau, createdep
 
 
 
@@ -198,3 +198,8 @@ def departamentos_detail_rest(request, departamentosdn_name):
 	hoteldp = restni.objects.filter(ciudad = departamentosdn_name)
 	print (hoteldp)
 	return render(request, 'departamentos_detail_rest.html',{'departamento_detail':departamentod, 'restnk':hoteldp})
+
+def createdepi():
+        return render(request, 'adminnk.html',{'form':createdep})
+
+
